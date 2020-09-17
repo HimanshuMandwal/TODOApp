@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%=title %></title>
+    </head>
+    <link rel="stylesheet" href="../assets/css/home.css" type="text/css">
+    <body>
+        <h1>
+            <%=title%>
+        </h1>
+        <form>
+            <input type="text" name="description" required>
+            <select name="category" required>
+                <option value="" disabled selected>chose one category</option>
+                <option value="personal">personal</option>
+                <option value="work">work</option>
+                <option value="school">school</option>
+                <option value="cleaning">cleaning</option>
+                <option value="others">others</option>
+            </select>
+            <input type="date" name="date" required>
+            <button type="submit">add to LIST</button>
+        </form>
+        <form action="" method="">
+
+            <ul>
+                <li><input type="checkbox">want to delete</li>
+            </ul>
+            <div class="delete-btn">
+                <a href="#"><button type="submit">delete</button></a>
+            </div>
+        </form>
+
+    </body>
+</html>
