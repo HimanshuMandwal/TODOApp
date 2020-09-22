@@ -14,7 +14,7 @@ function deletefunction(){
         url:'/removeTask',
         data:{info:checkedID},
         error:function(){
-            alert('error in deleting items');
+           console.log('error');
         },   
     });
     for(let item of checkedID ){

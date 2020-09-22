@@ -1,4 +1,4 @@
-//const Mytodo = require('../models/MyTodo');
+
 const MyTodoList=require('../models/MyTodo');
 
 
@@ -16,18 +16,15 @@ module.exports.addTask=function(req,res){
 };
 module.exports.deleteTask=function(req,res){
     console.log(req.query);
-    for(item of req.query.info)
+    for(let item of req.query.info)
     {
-        let s=0;
-        for(let fi of homecontroller.MyTodoList)
-        {
-            if(item==fi.date)
+        MyTodoList.findByIdAndDelete(item,function(err){
+            if(err)
             {
-                homecontroller.MyTodoList.splice(s,1);
+                console.log(`error in deleting the task ${err}`);
             }
-            s++;
-        }
+        });
     }
-    return res.redirect('back');
+    
     
 };
