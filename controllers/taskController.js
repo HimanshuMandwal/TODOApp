@@ -1,7 +1,18 @@
-const homecontroller=require('./homecontroller');
+//const Mytodo = require('../models/MyTodo');
+const MyTodoList=require('../models/MyTodo');
+
+
+
 module.exports.addTask=function(req,res){
-    homecontroller.MyTodoList.push(req.body);
-    return res.redirect('back');
+    MyTodoList.create(req.body,function(error,newTask){
+        if(error)
+        {
+            console.log('error in creating contact!',error);
+            return;
+        }
+        console.log('*******',newTask);
+        return res.redirect('back');
+    });
 };
 module.exports.deleteTask=function(req,res){
     console.log(req.query);
