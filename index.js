@@ -2,6 +2,9 @@ const express=require('express');
 const app=express();
 const port=8003;
 
+const db=require('./config/mongoose' );
+
+
 app.set('view engine','ejs');
 app.set('views','./views');
 app.use(express.static('assets'));
