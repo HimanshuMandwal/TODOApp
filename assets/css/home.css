@@ -1,168 +1,283 @@
-body{
-    background-image: url(https://previews.123rf.com/images/lisaalisaill/lisaalisaill1712/lisaalisaill171200089/91505212-travel-and-summer-seamless-pattern-journey-and-trip-background-adventure-time-pattern-in-hand-draw-s.jpg);
-    height:100vh;
-    width:100vw;
-    margin: 0px;
-}
+/* body of page */
+    body{
+        background-image: url(https://previews.123rf.com/images/lisaalisaill/lisaalisaill1712/lisaalisaill171200089/91505212-travel-and-summer-seamless-pattern-journey-and-trip-background-adventure-time-pattern-in-hand-draw-s.jpg);
+        height:100vh;
+        width:100vw;
+         margin: 0px;
+    }
+    /* responsiveness to body */
+    @media all and (max-width:676px){
+        body{
+        font-size: 13px;
+        }
+    }
 /* this is for all the main part of our page */
-main{
-    display: flex;
-    justify-content: space-evenly;
-    height:100% ;
-}
-.main-heading-container{
-  display: flex;
-  align-items: center;
-justify-content: center;
-padding: 10px;
-}
-.main-heading{
-    text-align: center;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 2rem;
-    font-family: fantasy;
-    background-color: cyan;
-    color: darkblue;
-    font-size: 3rem;
-    margin: 0px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top:0.5rem ;
-    font-weight: 700;
-    box-shadow: 0px 0px 5px 3px lightcoral;
-}
-
+    main{
+        display: flex;
+        justify-content: space-evenly;
+        height:85% ;
+    }
+/* making responsive the main section of our page */
+    @media all and (max-width:1024px)
+        {
+        main{
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            height: 140%;
+            justify-content: space-evenly;
+         }
+    }
+    .main-heading-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    .main-heading{
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 2rem;
+        font-family: fantasy;
+        background-color: cyan;
+        color: darkblue;
+        font-size: 3rem;
+        margin: 0px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top:0.5rem ;
+        font-weight: 700;
+        box-shadow: 0px 0px 5px 3px lightcoral;
+    }
+    /* responsive to main heading */
+    @media all and (max-width:360px){
+        .main-heading{
+           font-size: 1.5rem;  
+         }
+    }
 
 /* inner headings  */
-.inner-headings{
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 1rem;
-    font-family: fantasy;
-}
-
+    .inner-headings{
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+        font-family: fantasy;
+    }
+    @media all and (max-width:360px){
+            .inner-headings{
+            font-size: 1.4rem;  
+         }
+    }
 
 /* this is for our new task section  */
-.form-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 38%;
-    height: 80%;
-    background-color:#ced5eaed;
-    justify-content: space-evenly;
-    box-shadow: 0px 0px 10px 5px grey;
-    border-radius: 3rem;
-}
-.input-fields{
-    height: 10%;
-    width:70%;
-    background-color: transparent;
-    font-size: inherit;
-    border: none;
-    border-bottom:2px solid black ;
-}
-.input-fields:focus{
-    outline: none;
-}
-/* for the add task button that we have in our page */
-#add-btn{
-    height: 3rem;
-    width:auto;
-    font-size: 1rem;
-}
-#add-btn:hover{
-    color: white;
-    background-color: black;
-}
+    .form-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 38%;
+        height: 80%;
+        background-color:#ced5eaed;
+        justify-content: space-evenly;
+        box-shadow: 0px 0px 10px 5px grey;
+        border-radius: 3rem;
+    }
+    .input-fields{
+        height: 10%;
+        width:70%;
+        background-color: transparent;
+        font-size: inherit;
+        border: none;
+        border-bottom:2px solid black ;
+    }
+    .input-fields:focus{
+        outline: none;
+    }
+    /* input fields label styling */
+    .input-label{
+        display: block;
+        width: 70%;
+        font-family: cursive;
+        font-weight: bolder;
+        color: steelblue;
+    }
+    /* adding responsive to the form container */
+    @media all and (max-width:1024px){
+        .form-container{
+            width: 60%;
+            height: 40%;
+        }
+    }
+    @media (max-width: 676px){
+        .form-container {
+            width: 87%;
+            height: 40%;
+        }
+    }
+
+    /* for the add task button that we have in our page */
+    #add-btn{
+        height: 3rem;
+        width:auto;
+        font-size: 1rem;
+    }
+    #add-btn:hover{
+        color: white;
+        background-color: black;
+    }
+    /* responsive to add task button */
+    @media all and (max-width:360px){
+        #add-btn{
+            width: fit-content;
+            height:2rem ;
+            font-size: 0.8rem;
+        }
+    }
+
 
 
 /* this is for the task container block of the web page  */
-.task-container
-{
-    width:55%;
-    background-color: #ced5eaed;
-    height: 80%;
-    box-shadow: 0px 0px 10px 5px grey;
-    border-radius: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.task-container ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow-y:scroll;
-    overflow-x: auto;
-    margin: 0px;
-    height: 75%;
-    width: 90%;
-    padding: 0px;
-    padding-left: 1%;
-}
-.tasks{
-    display: flex;
-    justify-content: space-evenly;
-    width:98%;
-    height:auto;
-    border:1px solid lightgrey;
-    align-items: center;
-    font-family: monospace;
-    font-weight: bold;
-    font-size: 1.3rem;
-}
-.tasks:hover{
-    background-color: burlywood;
-    box-shadow: 0px 0px 5px 5px #7eca9d;
-}
+    .task-container
+    {
+        width:55%;
+        background-color: #ced5eaed;
+        height: 80%;
+        box-shadow: 0px 0px 10px 5px grey;
+        border-radius: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .task-container ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-y:scroll;
+        margin: 0px;
+        height: 75%;
+        width: 90%;
+        padding: 0px;
+        padding-left: 1%;
+    }
 
-.tasks>div>p{
-    margin: 0px;
-}
-/* delete button section button  */
-.delete-btn-container{
-    text-align: center;
-    height: 10%;
-    width: 100%;
-}
-#delete-btn{
-    height: 3rem;
-    width:15%;
-    font-size: 1rem;
-}
-#delete-btn:hover{
-    color: white;
-    background-color: black;
-}
+    /* this is for individual tasks */
+    .tasks{
+        display: flex;
+        justify-content: space-evenly;
+        width:98%;
+        height:auto;
+        border:1px solid lightgrey;
+        align-items: center;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    .tasks:hover{
+        background-color: burlywood;
+        box-shadow: 0px 0px 5px 5px #7eca9d;
+    }
+    .tasks>div>p{
+        margin: 0px;
+    }
 
-.description{
-    width: 42%;
-    color: rgb(33, 33, 181);
-}
-.category{
-   width: 12%;
-   text-align: center;
-    
-}
-.category-para{
-    width:fit-content;
-    text-align: center;
-    margin:3px;
-    height:inherit;
-    height: fit-content;
-    padding: 2px;
-    border-radius:0.6rem;
-    box-sizing: content-box;
-    box-shadow: 0px 0px 2px 2px lightgray;
-}
-.date-container{
-    color: rgb(143, 63, 6);
-}
-/* this is for the checkbox  */
-input[type="checkbox" i]{
-    height:1.5rem ;
-    width:1.5rem;
-}
+    /* rsponsive to task block contents */
+    @media all and (max-width:1024px){
+        .task-container{
+            width: 90%;
+            height: 50%;
+        }
+    }
+    @media all and (max-width:676px){
+        .tasks{
+            font-size: 0.8rem;
+        }
+    }
+    @media all and (max-width:360px){
+        .task-container{
+            width: 90%;
+        }
+        .task-container ul{
+            width: 100%;
+        }
+    }
+
+
+    /* this for the items inside each container */
+        .description{
+            width: 65%;
+            color: rgb(33, 33, 181);
+        }
+        .category{
+            width: 15%;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        text-align: center;
+            
+        }
+        .category-para{
+            width:100%;
+            text-align: center;
+            margin:3px;
+            height:inherit;
+            height: fit-content;
+            padding: 2px;
+            border-radius:0.6rem;
+            box-sizing: content-box;
+            box-shadow: 0px 0px 2px 2px lightgray;
+        }
+        @media all and (max-width:360px){
+            .category-para{
+                width:fit-content;
+            }
+        }
+        .date-container{
+            color: rgb(143, 63, 6);
+            font-weight: lighter;
+        }
+    /* this is for the checkbox  size increament */
+        input[type="checkbox" i]{
+            height:1.5rem ;
+                width:1.5rem;
+        }
+        @media all and (max-width:360px){
+                input[type="checkbox" i]{
+                height:1rem ;
+                width:1rem;
+            }
+        }    
+    /* delete button section for deleting the item from TODO */
+        .delete-btn-container{
+            text-align: center;
+            height: 10%;
+            width: 100%;
+        }
+        #delete-btn{
+            height:100%;
+            width:30%;
+            font-size: 1rem;
+        }
+        #delete-btn:hover{
+            color: white;
+            background-color: black;
+        }
+        /* making delete button rsponsive */
+        @media all and (max-width:676px){
+            #delete-btn{
+                width: 30%;
+            }
+
+        }
+        @media all and (max-width:360px){
+            #delete-btn{
+                width: fit-content;
+                height:2rem ;
+                font-size: 0.8rem;
+            }
+
+        }
+
+
+

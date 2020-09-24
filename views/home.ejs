@@ -9,48 +9,63 @@
     </head>
     <body>
         <div class="main-heading-container">
-        <h1 class="main-heading">
-            <%=title%>
-        </h1>
+           <h1 class="main-heading">
+              <%=title%>
+           </h1>
         </div>
+        <!-- main section of the page -->
         <main>
-        <form action="/addTask" method="POST" class="form-container">
-            <h1 class="inner-headings"><span><i class="fas fa-pen-nib"></i></span> &nbsp;  New Task</h1>
-            <input type="text" name="description" required class="input-fields">
-            <select name="category" required class="input-fields" >
-                <option value="" disabled selected>chose one category</option>
-                <option value="personal">personal</option>
-                <option value="work">work</option>
-                <option value="school">school</option>
-                <option value="cleaning">cleaning</option>
-                <option value="others">others</option>
-            </select>
-            <input type="date" name="date" required class="input-fields">
-            <button type="submit" id="add-btn">ADD TO LIST</button>
-        </form>
-        <div class="task-container">
-            <h1 class="inner-headings"><span><i class="fas fa-tasks"></i></span> &nbsp; My task</h1>
-            <ul>
+
+                <!-- input or from section of the page -->
+            <form action="/addTask" method="POST" class="form-container">
+
+                <h1 class="inner-headings"><span><i class="fas fa-pen-nib"></i></span> &nbsp;  New Task</h1>
+                
+                <!-- Description input -->
+                <label for="category" class="input-label">Description</label>
+                <input type="text" name="description" required class="input-fields" placeholder="what do you need to do">
+                
+                <!-- category input -->
+                <label for="category" class="input-label">Category</label>
+                <select name="category" required class="input-fields" >
+                    <option value="" disabled selected>chose one category</option>
+                    <option value="personal">personal</option>
+                    <option value="work">work</option>
+                    <option value="school">school</option>
+                    <option value="cleaning">cleaning</option>
+                    <option value="others">others</option>
+                </select>
+                
+                <!-- date input -->
+                <label for="date" class="input-label">Due Date</label>
+                <input type="date" name="date" class="input-fields" placeholder="Due Date" required>
+                
+                <button type="submit" id="add-btn"><span><i class="fas fa-plus"></i></span> ADD TO LIST</button>
+            </form>
+
+               <!-- task container block  -->
+            <div class="task-container">
+                <h1 class="inner-headings"><span><i class="fas fa-tasks"></i></span> &nbsp; My task</h1>
+                <ul>
                 <%for(let i of my_todo_list){%>
                 <li id="liitem-<%=i.id%>" class="tasks">
                     <input type="checkbox" class="checkbox" id="<%=i.id%>">
                 <div class="description">
                     <p><%=i.description%></p>
+                    <p class="date-container"><%=i.date%></p>
                 </div>
                
-                <div class="date-container">
-                    <p><%=i.date%></p>
-                </div>
+                
                 <div class="category">
                     <p class="category-para"><%=i.category%></p>
                 </div>
                  </li>
                  <%}%>
-            </ul>
-            <div class="delete-btn-container">
-                <button type="submit" id="delete-btn">Delete</button>
+                </ul>
+                <div class="delete-btn-container">
+                <button type="submit" id="delete-btn"><span><i class="fas fa-trash-alt"></i></span> DELETE TASK</button>
+                </div>
             </div>
-        </div>
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/home.js" type="text/javascript"></script>

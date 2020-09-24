@@ -1,15 +1,17 @@
-const express=require('express');
-const app=express();
-const port=8003;
+const express=require('express');//included module express as framework
+const app=express();//created express server
+const port=8001;
 
-const db=require('./config/mongoose');
+const db=require('./config/mongoose');//for data base adding to server
 
 
-app.set('view engine','ejs');
+app.set('view engine','ejs');//setting up the view engine as ejs
 app.set('views','./views');
-app.use(express.static('assets'));
-app.use(express.urlencoded());
-app.use('/',require('./routes/index'));
+
+app.use(express.static('assets'));//for adding assets to our server
+app.use(express.urlencoded());//it is a middleware 
+
+app.use('/',require('./routes/index'));//this is the router setting
 
 
 

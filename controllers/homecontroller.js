@@ -1,5 +1,6 @@
+//this is for the home controller
 
-const MyTodoList=require('../models/MyTodo');
+const MyTodoList=require('../models/MyTodo');//for fetching data from data base
 
 module.exports.homes=function(req,res){
     MyTodoList.find({},function(err,mytask){
@@ -9,9 +10,8 @@ module.exports.homes=function(req,res){
             return ;
         }
         else{
-            return res.render('home',
-            {
-                title:'TODO',
+            return res.render('home',{
+                title:'TODO App',
                 my_todo_list:mytask
             });
         }

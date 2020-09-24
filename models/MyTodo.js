@@ -1,3 +1,5 @@
+//this file conatin the schema for our storing our data
+
 const mongoose=require('mongoose');
 const mytodoschema=new mongoose.Schema({
     description:{
