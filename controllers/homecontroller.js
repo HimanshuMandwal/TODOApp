@@ -11,7 +11,7 @@ module.exports.homes=function(req,res){
         else{
             return res.render('home',
             {
-                title:'Contact List',
+                title:'TODO',
                 my_todo_list:mytask
             });
         }

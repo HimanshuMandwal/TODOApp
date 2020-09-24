@@ -1,0 +1,168 @@
+body{
+    background-image: url(https://previews.123rf.com/images/lisaalisaill/lisaalisaill1712/lisaalisaill171200089/91505212-travel-and-summer-seamless-pattern-journey-and-trip-background-adventure-time-pattern-in-hand-draw-s.jpg);
+    height:100vh;
+    width:100vw;
+    margin: 0px;
+}
+/* this is for all the main part of our page */
+main{
+    display: flex;
+    justify-content: space-evenly;
+    height:100% ;
+}
+.main-heading-container{
+  display: flex;
+  align-items: center;
+justify-content: center;
+padding: 10px;
+}
+.main-heading{
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 2rem;
+    font-family: fantasy;
+    background-color: cyan;
+    color: darkblue;
+    font-size: 3rem;
+    margin: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top:0.5rem ;
+    font-weight: 700;
+    box-shadow: 0px 0px 5px 3px lightcoral;
+}
+
+
+/* inner headings  */
+.inner-headings{
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: fantasy;
+}
+
+
+/* this is for our new task section  */
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 38%;
+    height: 80%;
+    background-color:#ced5eaed;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 10px 5px grey;
+    border-radius: 3rem;
+}
+.input-fields{
+    height: 10%;
+    width:70%;
+    background-color: transparent;
+    font-size: inherit;
+    border: none;
+    border-bottom:2px solid black ;
+}
+.input-fields:focus{
+    outline: none;
+}
+/* for the add task button that we have in our page */
+#add-btn{
+    height: 3rem;
+    width:auto;
+    font-size: 1rem;
+}
+#add-btn:hover{
+    color: white;
+    background-color: black;
+}
+
+
+/* this is for the task container block of the web page  */
+.task-container
+{
+    width:55%;
+    background-color: #ced5eaed;
+    height: 80%;
+    box-shadow: 0px 0px 10px 5px grey;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.task-container ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow-y:scroll;
+    overflow-x: auto;
+    margin: 0px;
+    height: 75%;
+    width: 90%;
+    padding: 0px;
+    padding-left: 1%;
+}
+.tasks{
+    display: flex;
+    justify-content: space-evenly;
+    width:98%;
+    height:auto;
+    border:1px solid lightgrey;
+    align-items: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.tasks:hover{
+    background-color: burlywood;
+    box-shadow: 0px 0px 5px 5px #7eca9d;
+}
+
+.tasks>div>p{
+    margin: 0px;
+}
+/* delete button section button  */
+.delete-btn-container{
+    text-align: center;
+    height: 10%;
+    width: 100%;
+}
+#delete-btn{
+    height: 3rem;
+    width:15%;
+    font-size: 1rem;
+}
+#delete-btn:hover{
+    color: white;
+    background-color: black;
+}
+
+.description{
+    width: 42%;
+    color: rgb(33, 33, 181);
+}
+.category{
+   width: 12%;
+   text-align: center;
+    
+}
+.category-para{
+    width:fit-content;
+    text-align: center;
+    margin:3px;
+    height:inherit;
+    height: fit-content;
+    padding: 2px;
+    border-radius:0.6rem;
+    box-sizing: content-box;
+    box-shadow: 0px 0px 2px 2px lightgray;
+}
+.date-container{
+    color: rgb(143, 63, 6);
+}
+/* this is for the checkbox  */
+input[type="checkbox" i]{
+    height:1.5rem ;
+    width:1.5rem;
+}

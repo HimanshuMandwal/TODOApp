@@ -2,7 +2,7 @@ const express=require('express');
 const app=express();
 const port=8003;
 
-const db=require('./config/mongoose' );
+const db=require('./config/mongoose');
 
 
 app.set('view engine','ejs');
